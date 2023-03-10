@@ -108,6 +108,11 @@ def test_caesar():
 
     # À vous !
 
+    encrypted = caesar.encrypt(msg, key)
+    assert encrypted == expected_encryption
+    decrypted = caesar.decrypt(encrypted, key)
+    assert decrypted == msg
+
 #######################################################################
 # À vous d'écrire entièrement les tests restants. Quelques conseils :
 #   - Vous pouvez lancer l'application et tester les différents cryptages
