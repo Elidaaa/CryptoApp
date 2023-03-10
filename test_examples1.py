@@ -94,6 +94,9 @@ def test_blowfish():
 
 
     # À vous ! Ne testez que la valeur du message décrypté cette fois !
+    encrypted = blowfish.encrypt(msg, key)
+    decrypted = blowfish.decrypt(encrypted, key)
+    assert decrypted == msg
 
 
 def test_caesar():
